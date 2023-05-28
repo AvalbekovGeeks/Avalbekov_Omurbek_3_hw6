@@ -1,7 +1,31 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    fun calculator(a: Int, b: Int, sign: Char): Int {
+        return when (sign) {
+            '+' -> {
+                a + b
+            }
+
+            '-' -> {
+                a - b
+            }
+
+            '*' -> {
+                a * b
+            }
+
+            '/' -> {
+                a / b
+            }
+
+            else -> throw IllegalArgumentException("Error !!")
+        }
+    }
+
+    val a = 24
+    val b = 15
+    val sign = '-'
+    val count = calculator(a, b, sign)
+    println(count)
+
 }
