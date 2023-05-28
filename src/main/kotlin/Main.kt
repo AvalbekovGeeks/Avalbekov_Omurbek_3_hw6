@@ -1,4 +1,4 @@
-fun main(args: Array<String>) {
+fun main() {
 
     fun calculator(a: Int, b: Int, sign: Char): Int {
         return when (sign) {
